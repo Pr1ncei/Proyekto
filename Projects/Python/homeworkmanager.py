@@ -1,25 +1,51 @@
 """
 HOMEWORK MANAGER using TKINTER
 
-The program uses a GUI from TKINTER only
-- Add Title 
-- And a rough grasp of the project (Pre-development)
-- Make the GUI Responsive 
+Pre-Development Grasp:
+The project aims to create a Tkinter-based GUI application to help users manage their homework, projects, or tasks in general. It is basically like a TO-DO List app but with notification and priority system. The application will allow users to add and remove tasks, set deadlines, and add descriptions. A tab view will show the remaining days until the deadline, and detailed descriptions will be displayed upon clicking a task. The GUI will be responsive, ensuring it looks good on different screen sizes, and will potentially support custom resolution.
 
-Features:
-1. Add & Remove Homework/Projects
-    a. Put a deadline by typing or picking it on a calendar (GUI)
-    b. Add Description of the Homework
-2. Tab view of the homework
-    a. shows the remaining days of the homework, but once click it, it will show the description of the homework
-    b. if there are no homework, show something like "Take a break"
+Other Ideas: 
+- On the startup of the app, the default view will be the tab view or the overview of the tasks. 
+- Then the task manager (adding, removing) the homeworks will be set on the side view
+- Add Notification System abd Priority System by using colors 
 
-BONUS:
-- Custom Resolution
+Initial Steps:
+- Basic GUI Setup:
+    - Tkinter
+    - Main Window
+    - Add Title
+
+- Make the GUI Responsive
+    - Grid Layout
+    - Window Resizing
+
+- Implement Basic Features:
+    - Add & Remove Homework/Projects:
+        - Create buttons to add and remove tasks.
+    - Implement an input field for the task description and a date picker for the deadline.
+
+- Default Tab View on Startup
+    - When the app starts, it will open directly to the tab view, showing the list of app tasks with their remaining days until the deadline
+        - use the Notebook widget from Tkinter's ttk module to create tabs
+
+- Side View Tab
+    - By using PanedWindow, the utilities will be positioned on the side bar on the main window, like on Canvas
+
+- Notification and Priority Sytem 
+    - Notification System:
+        - Set up notifications that alert users when a deadline is approaching.
+        - Implementation: Use a timer or scheduler to check deadlines periodically and display a pop-up or a message on the screen when a task is due soon.
+
+    - Priority System Using Colors:
+        - Tasks will be color-coded based on their priority, making it easy to distinguish high-priority tasks at a glance.
+        - Implementation: Assign colors to tasks based on their priority level (e.g., red for high priority, yellow for medium, green for low). You can use the tag_configure method of the Treeview or Listbox widget to apply colors.
 
 References:
 - Notion App
+- Canvas
+
 """
+
 # Progress: Ongoing
 
 # Setting the GUI up first (08-24-2024)
