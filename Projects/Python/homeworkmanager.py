@@ -31,7 +31,7 @@ Initial Steps:
 - Side View Tab
     - By using PanedWindow, the utilities will be positioned on the side bar on the main window, like on Canvas
 
-- Notification and Priority Sytem 
+- Notification and Priority System 
     - Notification System:
         - Set up notifications that alert users when a deadline is approaching.
         - Implementation: Use a timer or scheduler to check deadlines periodically and display a pop-up or a message on the screen when a task is due soon.
@@ -50,10 +50,23 @@ References:
 
 # Setting the GUI up first (08-24-2024)
 from tkinter import *
-import tkinter as tk 
+import tkinter as tk
+from customtkinter import *
 
 root = tk.Tk()
+root.geometry('800x600')
 root.title("HOMEWORK MANAGER")
-root.minsize(800,600)
+root.configure(background="white") # Main Background
 
-root.mainloop() # Output
+# Side Bar
+options_frame = tk.Frame(root, bg="#08002f")
+options_frame.pack(side=tk.LEFT, fill="y")
+options_frame.pack_propagate(False)
+options_frame.configure(width=100, height=400)
+
+
+
+# To make it responsive, add on the 'pack()', "fill="x" and fill="both", expand=True for text boxes. See the sample above
+
+# Output
+root.mainloop()  
